@@ -11,7 +11,7 @@ public class LazyInnerSingletonTest {
     @Test
     public void testLazyInnerSingleton() {
 
-        LazyInnerSingleton instance = LazyInnerSingleton.getInstance();
+        /*LazyInnerSingleton instance = LazyInnerSingleton.getInstance();
         System.out.println(instance);
         //反射情况下破坏了单例，重新生成了对象
         Class<LazyInnerSingleton> lazyInnerSingletonClass = LazyInnerSingleton.class;
@@ -28,7 +28,9 @@ public class LazyInnerSingletonTest {
             e.printStackTrace();
         } catch (InvocationTargetException e) {
             e.printStackTrace();
-        }
+        }*/
+        LazyInnerSingleton.getA();
+        LazyInnerSingleton instance = LazyInnerSingleton.getInstance();
     }
 
 }
